@@ -1,7 +1,14 @@
+import { Link, Outlet } from "react-router-dom";
+
 const Header = () => {
   return (
-    <div>
-      <h1>Header</h1>
+    <div className="header">
+      <div>
+        <Link to="/">Home</Link>
+      </div>
+      <div>
+        <Outlet />
+      </div>
     </div>
   );
 };
