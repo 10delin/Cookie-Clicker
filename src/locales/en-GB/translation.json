@@ -1,0 +1,20 @@
+{
+  "home": {
+    "title": "Create new player",
+    "placeholder": "Name *",
+    "button": "Join",
+    "error": "Required field"
+  },
+
+  "header": {
+    "hello": "Hi",
+    "home": "Home"
+  },
+
+  "game": {
+    "title": "Merged pull request: ",
+    "autoMergers": "Auto mergers: ",
+    "button": "MERGE",
+    "buy": "BUY AUTO MERGER"
+  }
+}
