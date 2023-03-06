@@ -2,12 +2,16 @@ import { useState } from "react";
 import { useNavigate } from "react-router";
 import { useDispatch } from "react-redux";
 import { setGlobalName } from "../redux/reducers/nameSlice";
+import { useTranslation } from "react-i18next";
+import ChangeLanguage from "../components/ChangeLanguage";
 
 const Home = () => {
   const [name, setName] = useState("");
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
+
+  const { t } = useTranslation();
 
   const handleChange = (e) => {
     setName(e.target.value);
@@ -21,15 +25,16 @@ const Home = () => {
 
   return (
     <div className="home">
-      <h1>Create a new player</h1>
+      <ChangeLanguage />
+      <h1>{t("home.title")}</h1>
       <form onSubmit={handleSubmit}>
         <input
           name={name}
           type="text"
-          placeholder="Name *"
+          placeholder={t("home.placeholder")}
           onChange={handleChange}
         />
-        <button disabled={name.length <= 0}>Join</button>
+        <button disabled={name.length <= 0}>{t("home.button")}</button>
       </form>
     </div>
   );

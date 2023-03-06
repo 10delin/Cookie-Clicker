@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
 import Header from "../components/Header";
+import { useTranslation } from "react-i18next";
 
 const Game = () => {
-  const { name } = useSelector((state) => state);
-
   const [points, setPoints] = useState(0);
   const [autoClickers, setAutoClickers] = useState(0);
   const [showAuto, setShowAuto] = useState(false);
+
+  const { t } = useTranslation();
 
   const autoClickerCost = 50 + 50 * autoClickers;
 
@@ -40,14 +40,16 @@ const Game = () => {
     <>
       <Header />
       <div className="game">
-        <h1>Hola {name}</h1>
-        <button onClick={handleClick}>Points: {points}</button>
+        <p>
+          {t("game.title")} : {points}
+        </p>
+        <button onClick={handleClick}>{t("game.button")}</button>
         {showAuto && (
           <button
             disabled={points < autoClickerCost}
             onClick={handleBuyAutoClicker}
           >
-            Buy AutoClicker ({autoClickerCost})
+            {t("game.buy")}({autoClickerCost})
           </button>
         )}
       </div>

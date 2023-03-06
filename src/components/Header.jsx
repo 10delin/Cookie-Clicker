@@ -1,10 +1,18 @@
 import { Link, Outlet } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { useTranslation } from "react-i18next";
 
 const Header = () => {
+  const { name } = useSelector((state) => state);
+  const { t } = useTranslation();
+
   return (
     <div className="header">
+      <h1>
+        {t("header.hello")} {name}
+      </h1>
       <div>
-        <Link to="/">Home</Link>
+        <Link to="/">{t("header.home")}</Link>
       </div>
       <div>
         <Outlet />
