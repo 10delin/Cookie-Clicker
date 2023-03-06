@@ -1,7 +1,10 @@
 import { useState } from "react";
+import { useNavigate } from "react-router";
 
 const Home = () => {
   const [name, setName] = useState("");
+
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setName(e.target.value);
@@ -9,6 +12,7 @@ const Home = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    navigate("/game");
   };
 
   return (
