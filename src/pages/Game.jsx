@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import Header from "../components/Header";
 
 const Game = () => {
+  const { name } = useSelector((state) => state);
+
   const [points, setPoints] = useState(0);
   const [autoClickers, setAutoClickers] = useState(0);
   const [showAuto, setShowAuto] = useState(false);
@@ -37,7 +40,7 @@ const Game = () => {
     <>
       <Header />
       <div className="game">
-        <h1>Hola Antonio</h1>
+        <h1>Hola {name}</h1>
         <button onClick={handleClick}>Points: {points}</button>
         {showAuto && (
           <button

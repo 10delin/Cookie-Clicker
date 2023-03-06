@@ -1,10 +1,13 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
+import { useDispatch } from "react-redux";
+import { setGlobalName } from "../redux/reducers/nameSlice";
 
 const Home = () => {
   const [name, setName] = useState("");
 
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const handleChange = (e) => {
     setName(e.target.value);
@@ -12,6 +15,7 @@ const Home = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    dispatch(setGlobalName(name));
     navigate("/game");
   };
 
