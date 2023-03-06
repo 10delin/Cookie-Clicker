@@ -1,3 +1,7 @@
 {
-  "extends": ["some-other-config-you-use", "prettier"]
+  "plugins": ["cypress"],
+  "extends": ["plugin:cypress/recommended"],
+  "rules": {
+    "jest/expect-expect": "off"
+  }
 }

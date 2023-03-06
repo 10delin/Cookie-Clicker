@@ -24,10 +24,18 @@ const ChangeLanguage = () => {
 
   return (
     <div className="change-language">
-      <div className={classLanguageSpanish} onClick={() => setLanguage("es")}>
+      <div
+        className={classLanguageSpanish}
+        onClick={() => setLanguage("es")}
+        data-cy="es-lang"
+      >
         <img src={SpainIcon} alt="Spanish" />
       </div>
-      <div className={classLanguageEngish} onClick={() => setLanguage("en")}>
+      <div
+        className={classLanguageEngish}
+        onClick={() => setLanguage("en")}
+        data-cy="en-lang"
+      >
         <img src={UkIcon} alt="English" />
       </div>
     </div>

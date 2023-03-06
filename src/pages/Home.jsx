@@ -33,8 +33,11 @@ const Home = () => {
           type="text"
           placeholder={t("home.placeholder")}
           onChange={handleChange}
+          data-cy="input-home"
         />
-        <button disabled={name.length <= 0}>{t("home.button")}</button>
+        <button disabled={name.length <= 0} data-cy="button-home">
+          {t("home.button")}
+        </button>
       </form>
     </div>
   );

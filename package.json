@@ -8,6 +8,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "prepare": "husky install",
+    "cy:run": "npx cypress run",
+    "cy:open": "cypress open",
     "husky": "node ./node_modules/husky/lib/bin.js"
   },
   "dependencies": {
@@ -27,8 +29,10 @@
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "@vitejs/plugin-react": "^3.1.0",
+    "cypress": "^12.7.0",
     "eslint": "^8.35.0",
     "eslint-config-react-app": "^7.0.1",
+    "eslint-plugin-cypress": "^2.12.1",
     "eslint-plugin-react": "^7.32.2",
     "husky": "^8.0.0",
     "i18next": "^22.4.10",

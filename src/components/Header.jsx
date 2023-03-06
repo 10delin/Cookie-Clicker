@@ -12,7 +12,9 @@ const Header = () => {
         {t("header.hello")} {name}
       </h1>
       <div>
-        <Link to="/">{t("header.home")}</Link>
+        <Link to="/" data-cy="link-home">
+          {t("header.home")}
+        </Link>
       </div>
       <div>
         <Outlet />

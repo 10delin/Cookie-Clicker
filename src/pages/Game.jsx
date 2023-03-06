@@ -43,11 +43,14 @@ const Game = () => {
         <p>
           {t("game.title")} : {points}
         </p>
-        <button onClick={handleClick}>{t("game.button")}</button>
+        <button onClick={handleClick} data-cy="merge-button">
+          {t("game.button")}
+        </button>
         {showAuto && (
           <button
             disabled={points < autoClickerCost}
             onClick={handleBuyAutoClicker}
+            data-cy="auto-button"
           >
             {t("game.buy")}({autoClickerCost})
           </button>
