@@ -28,7 +28,7 @@ const Game = () => {
   }, [autoClickers]);
 
   useEffect(() => {
-    if (points >= 0) {
+    if (points >= 50) {
       setShowAuto(true);
     }
   }, [points]);
