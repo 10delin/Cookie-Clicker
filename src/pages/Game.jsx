@@ -14,7 +14,7 @@ const Game = () => {
   const [autoClickers, setAutoClickers] = useState(0);
 
   const autoClickerCost = 50 + 50 * autoClickers;
-  const showAuto = points >= 50;
+  const showAuto = autoClickers > 0 || points >= 50;
 
   const handleClick = () => {
     setPoints((prevPoints) => prevPoints + 1);
