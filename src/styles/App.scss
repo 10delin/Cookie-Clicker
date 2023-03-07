@@ -5,10 +5,13 @@
 @import "./base/mixins";
 
 //import Components
+@import "./components/header";
 @import "./components/change-language";
 @import "./components/input-form";
 @import "./components/mouse-icon";
+@import "./components/exit-icon";
+@import "./components/button";
 
 //import Pages
-
 @import "./pages/Home";
+@import "./pages/Game";

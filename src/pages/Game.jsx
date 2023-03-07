@@ -1,13 +1,16 @@
 import { useEffect, useState } from "react";
 import Header from "../components/Header";
 import { useTranslation } from "react-i18next";
+import Button from "../components/Button";
+import CartIcon from "../components/Icons/CartIcon";
+import MergeIcon from "../components/Icons/MergeIcon";
 
 const Game = () => {
+  const { t } = useTranslation();
+
   const [points, setPoints] = useState(0);
   const [autoClickers, setAutoClickers] = useState(0);
   const [showAuto, setShowAuto] = useState(false);
-
-  const { t } = useTranslation();
 
   const autoClickerCost = 50 + 50 * autoClickers;
 
@@ -40,21 +43,32 @@ const Game = () => {
     <>
       <Header />
       <div className="game">
-        <p>
-          {t("game.title")} : {points}
-        </p>
-        <button onClick={handleClick} data-cy="merge-button">
-          {t("game.button")}
-        </button>
-        {showAuto && (
-          <button
-            disabled={points < autoClickerCost}
-            onClick={handleBuyAutoClicker}
-            data-cy="auto-button"
-          >
-            {t("game.buy")}({autoClickerCost})
-          </button>
-        )}
+        <div className="game__content">
+          <p>
+            {t("game.title")} : {points}
+          </p>
+          <p>
+            {t("game.autoMergers")} : {autoClickers}
+          </p>
+        </div>
+        <div className="game__buttons">
+          <Button
+            onClick={handleClick}
+            text={t("game.button")}
+            icon={<MergeIcon />}
+            dataCy="merge-button"
+          />
+          {showAuto && (
+            <Button
+              onClick={handleBuyAutoClicker}
+              text={t("game.buy")}
+              secondary={autoClickerCost}
+              disabled={points < autoClickerCost}
+              icon={<CartIcon />}
+              dataCy="auto-button"
+            />
+          )}
+        </div>
       </div>
     </>
   );

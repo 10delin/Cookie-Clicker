@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: #353535;
+  z-index: 2;
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 30px;
+
+    &--name {
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    &--link {
+      display: flex;
+    }
+  }
+}

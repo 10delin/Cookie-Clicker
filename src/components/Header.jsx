@@ -1,6 +1,7 @@
-import { Link, Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
+import ExitIcon from "./Icons/ExitIcon";
 
 const Header = () => {
   const { name } = useSelector((state) => state);
@@ -8,16 +9,13 @@ const Header = () => {
 
   return (
     <div className="header">
-      <h1>
-        {t("header.hello")} {name}
-      </h1>
-      <div>
-        <Link to="/" data-cy="link-home">
-          {t("header.home")}
+      <div className="header__content">
+        <p className="header__content--name">
+          {t("header.hello")} {name}
+        </p>
+        <Link className="header__content--link" to="/" data-cy="link-home">
+          <ExitIcon />
         </Link>
-      </div>
-      <div>
-        <Outlet />
       </div>
     </div>
   );
