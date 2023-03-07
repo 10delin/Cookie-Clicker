@@ -42,7 +42,8 @@ const Game = () => {
     if (name === "") {
       navigate("/");
     }
-    localStorage.setItem(name, JSON.stringify({ name, points, autoClickers }));
+    localStorage.setItem(name, JSON.stringify({ points, autoClickers }));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [points, autoClickers, name]);
 
   useEffect(() => {
