@@ -5,7 +5,6 @@ import { useTranslation } from "react-i18next";
 import Button from "../components/Button";
 import CartIcon from "../components/Icons/CartIcon";
 import MergeIcon from "../components/Icons/MergeIcon";
-import { useNavigate } from "react-router";
 
 const Game = () => {
   const { t } = useTranslation();
@@ -14,7 +13,6 @@ const Game = () => {
   const [points, setPoints] = useState(0);
   const [autoClickers, setAutoClickers] = useState(0);
 
-  const navigate = useNavigate();
   const autoClickerCost = 50 + 50 * autoClickers;
   const showAuto = points >= 50;
 
@@ -39,9 +37,6 @@ const Game = () => {
   }, [name]);
 
   useEffect(() => {
-    if (name === "") {
-      navigate("/");
-    }
     localStorage.setItem(name, JSON.stringify({ points, autoClickers }));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [points, autoClickers, name]);
