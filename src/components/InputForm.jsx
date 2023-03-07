@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import Button from "./Button";
 
 const InputForm = ({ name, handleChange, handleSubmit }) => {
   const { t } = useTranslation();
@@ -12,9 +13,12 @@ const InputForm = ({ name, handleChange, handleSubmit }) => {
         onChange={handleChange}
         data-cy="input-home"
       />
-      <button disabled={name.length <= 0} data-cy="button-home">
-        {t("home.button")}
-      </button>
+      <Button
+        disabled={name.length <= 0}
+        name={name}
+        text={t("home.button")}
+        dataCy={"button-home"}
+      />
     </form>
   );
 };
