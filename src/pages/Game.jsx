@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Header from "../components/Header";
+import { useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
 import Button from "../components/Button";
 import CartIcon from "../components/Icons/CartIcon";
@@ -7,6 +8,7 @@ import MergeIcon from "../components/Icons/MergeIcon";
 
 const Game = () => {
   const { t } = useTranslation();
+  const { name } = useSelector((state) => state);
 
   const [points, setPoints] = useState(0);
   const [autoClickers, setAutoClickers] = useState(0);
@@ -24,6 +26,21 @@ const Game = () => {
       setPoints((prevPoints) => prevPoints - autoClickerCost);
     }
   };
+
+  // Carga los datos guardados del usuario desde localStorage o cookies, si existen
+  useEffect(() => {
+    const storedUser = localStorage.getItem(name);
+
+    if (storedUser !== null) {
+      setPoints(JSON.parse(storedUser).points);
+      setAutoClickers(JSON.parse(storedUser).autoClickers);
+    }
+  }, [name]);
+
+  // Guarda los datos del juego en localStorage o cookies cada vez que cambian
+  useEffect(() => {
+    localStorage.setItem(name, JSON.stringify({ points, autoClickers }));
+  }, [points, autoClickers, name]);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
