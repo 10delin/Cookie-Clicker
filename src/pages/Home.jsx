@@ -4,6 +4,8 @@ import { useDispatch } from "react-redux";
 import { setGlobalName } from "../redux/reducers/nameSlice";
 import { useTranslation } from "react-i18next";
 import ChangeLanguage from "../components/ChangeLanguage";
+import InputForm from "../components/InputForm";
+import MouseIcon from "../components/Icons/MouseIcon";
 
 const Home = () => {
   const [name, setName] = useState("");
@@ -26,19 +28,15 @@ const Home = () => {
   return (
     <div className="home">
       <ChangeLanguage />
-      <h1>{t("home.title")}</h1>
-      <form onSubmit={handleSubmit}>
-        <input
+      <div className="home__content">
+        <MouseIcon />
+        <h1 className="home__content--title">{t("home.title")}</h1>
+        <InputForm
           name={name}
-          type="text"
-          placeholder={t("home.placeholder")}
-          onChange={handleChange}
-          data-cy="input-home"
+          handleChange={handleChange}
+          handleSubmit={handleSubmit}
         />
-        <button disabled={name.length <= 0} data-cy="button-home">
-          {t("home.button")}
-        </button>
-      </form>
+      </div>
     </div>
   );
 };
