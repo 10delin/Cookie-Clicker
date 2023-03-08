@@ -16,5 +16,10 @@
     "autoMergers": "Auto mergers: ",
     "button": "MERGE",
     "buy": "BUY AUTO MERGER"
+  },
+
+  "ranking": {
+    "title": "Player Ranking",
+    "points": "points"
   }
 }

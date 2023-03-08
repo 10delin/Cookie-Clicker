@@ -16,5 +16,10 @@
     "autoMergers": "Auto mergeadores: ",
     "button": "MERGEAR",
     "buy": "COMPRAR AUTO MERGEADORES"
+  },
+
+  "ranking": {
+    "title": "Ranking de jugadores",
+    "points": "puntos"
   }
 }
