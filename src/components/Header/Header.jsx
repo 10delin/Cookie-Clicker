@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
+
 import ExitIcon from "../Icons/ExitIcon";
 
 const Header = () => {

@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import Header from "../../components/Header/Header";
 import { useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
+
+import Header from "../../components/Header/Header";
 import Button from "../../components/Button/Button";
 import CartIcon from "../../components/Icons/CartIcon";
 import MergeIcon from "../../components/Icons/MergeIcon";

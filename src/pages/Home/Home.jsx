@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
 import { useDispatch } from "react-redux";
-import { setGlobalName } from "../../redux/reducers/nameSlice";
 import { useTranslation } from "react-i18next";
+
+import { setGlobalName } from "../../redux/reducers/nameSlice";
+
 import ChangeLanguage from "../../components/ChangeLanguage/ChangeLanguage";
 import InputForm from "../../components/InputForm/InputForm";
 import MouseIcon from "../../components/Icons/MouseIcon";
