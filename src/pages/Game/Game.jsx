@@ -6,6 +6,7 @@ import Header from "../../components/Header/Header";
 import Button from "../../components/Button/Button";
 import CartIcon from "../../components/Icons/CartIcon";
 import MergeIcon from "../../components/Icons/MergeIcon";
+import PlayerRanking from "../../components/PlayerRanking/PlayerRanking";
 
 const Game = () => {
   const { t } = useTranslation();
@@ -38,7 +39,7 @@ const Game = () => {
   }, [name]);
 
   useEffect(() => {
-    localStorage.setItem(name, JSON.stringify({ points, autoClickers }));
+    localStorage.setItem(name, JSON.stringify({ name, points, autoClickers }));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [points, autoClickers, name]);
 
@@ -80,6 +81,7 @@ const Game = () => {
             />
           )}
         </div>
+        <PlayerRanking />
       </div>
     </>
   );
