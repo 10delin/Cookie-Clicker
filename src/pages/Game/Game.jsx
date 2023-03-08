@@ -41,9 +41,10 @@ const Game = () => {
   useEffect(() => {
     const storedUser = localStorage.getItem(name);
     if (storedUser !== null) {
-      const { points, autoClickers } = JSON.parse(storedUser);
+      const { points, autoClickers, megaClickers } = JSON.parse(storedUser);
       setPoints(points);
       setAutoClickers(autoClickers);
+      setMegaClickers(megaClickers);
     }
   }, [name]);
 
@@ -53,7 +54,7 @@ const Game = () => {
     } else {
       localStorage.setItem(
         name,
-        JSON.stringify({ name, points, autoClickers })
+        JSON.stringify({ name, points, autoClickers, megaClickers })
       );
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
