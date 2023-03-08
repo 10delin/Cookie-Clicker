@@ -1,15 +1,14 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
 import Header from "../../components/Header/Header";
 
 import PlayerRanking from "../../components/PlayerRanking/PlayerRanking";
 import MergeButtons from "../../components/MergeButtons/MergeButtons";
+import GameContent from "../../components/GameContent/GameContent";
 
 const Game = () => {
-  const { t } = useTranslation();
   const { name } = useSelector((state) => state);
   const navigate = useNavigate();
 
@@ -49,12 +48,14 @@ const Game = () => {
   }, [name]);
 
   useEffect(() => {
-    name === ""
-      ? navigate("/")
-      : localStorage.setItem(
-          name,
-          JSON.stringify({ name, points, autoClickers })
-        );
+    if (!name) {
+      navigate("/");
+    } else {
+      localStorage.setItem(
+        name,
+        JSON.stringify({ name, points, autoClickers })
+      );
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [points, autoClickers, name]);
 
@@ -76,13 +77,11 @@ const Game = () => {
     <>
       <Header />
       <div className="game">
-        <div className="game__content">
-          {t("game.title")} : {points}
-          <br></br>
-          {t("game.autoMergers")} : {autoClickers}
-          <br></br>
-          {t("game.megaMergers")} : {megaClickers}
-        </div>
+        <GameContent
+          points={points}
+          autoClickers={autoClickers}
+          megaClickers={megaClickers}
+        />
         <MergeButtons
           handleClick={handleClick}
           showAuto={showAuto}

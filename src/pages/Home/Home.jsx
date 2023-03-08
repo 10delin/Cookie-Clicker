@@ -10,12 +10,11 @@ import InputForm from "../../components/InputForm/InputForm";
 import MouseIcon from "../../components/Icons/MouseIcon";
 
 const Home = () => {
-  const [name, setName] = useState("");
-
   const navigate = useNavigate();
   const dispatch = useDispatch();
-
   const { t } = useTranslation();
+
+  const [name, setName] = useState("");
 
   const handleChange = (e) => {
     setName(e.target.value);

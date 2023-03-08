@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import Button from "../../components/Button/Button";
 import CartIcon from "../../components/Icons/CartIcon";
 import MergeIcon from "../../components/Icons/MergeIcon";
+import FireIcon from "../Icons/FireIcon";
 
 const MergeButtons = ({
   handleClick,
@@ -37,7 +38,7 @@ const MergeButtons = ({
             text={t("game.buyMega")}
             secondary={megaClickerCost}
             disabled={points < megaClickerCost}
-            icon={<CartIcon />}
+            icon={<FireIcon />}
             dataCy="mega-button"
           />
         </>
