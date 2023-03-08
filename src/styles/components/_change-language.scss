@@ -1,0 +1,44 @@
+.change-language {
+  display: flex;
+  position: relative;
+  max-width: 122px;
+  margin-bottom: 24px;
+  border: 1px solid $c-border-color;
+  border-radius: 5px;
+  box-shadow: 0 8px 24px -17px $c-black;
+  @include breakpoint(mobile) {
+    margin-bottom: initial;
+  }
+
+  &__button {
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding: 5px 15px;
+    width: 100%;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $c-background-color-button;
+    }
+    img {
+      width: 30px;
+    }
+  }
+
+  &__button--active {
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding: 5px 15px;
+    width: 100%;
+    text-decoration: none;
+    background-color: $c-background-active-button;
+    cursor: pointer;
+
+    img {
+      width: 30px;
+    }
+  }
+}

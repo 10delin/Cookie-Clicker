@@ -1,0 +1,15 @@
+.exit-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $c-white;
+  &:hover {
+    cursor: pointer;
+    color: $c-hover-icon;
+  }
+
+  svg {
+    width: 25px;
+    height: 25px;
+  }
+}

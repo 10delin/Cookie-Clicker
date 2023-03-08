@@ -1,0 +1,39 @@
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  gap: 15px;
+  margin-top: 150px;
+
+  p {
+    font-size: 23px;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
+    font-weight: 500;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 500px;
+    margin-top: 16px;
+    gap: 1px;
+
+    button {
+      border-radius: 5px;
+    }
+  }
+}

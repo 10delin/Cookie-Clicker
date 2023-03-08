@@ -1,0 +1,41 @@
+$c-text-primary: #0f104d;
+
+$c-background-header: #353535;
+$c-background-color-button: #85c2f8;
+$c-background-active-button: #b4daf1;
+$c-background-disabled-button: #8f8f8f;
+$c-background-input: #242424;
+
+$c-border-color: #999999;
+$-c-name-ranking: #ffeb3b;
+
+$c-mouse-icon: #c788d4;
+
+$c-hover-icon: rgb(255, 255, 50);
+
+$c-white: #fff;
+$c-black: #000;
+
+// BREAKPOINTS
+// Small screen / phone
+$bp-mobile: 599px;
+// Medium screen / tablet
+$bp-tablet: 768px;
+// Large screen / tablet portrait
+$bp-desktop: 1024px;
+// Large screen / desktop
+$bp-desktop-medium: 1200px;
+// Extra large screen / wide desktop
+$bp-desktop-large: 1440px;
+// Extra extra large screen / extra wide desktop
+$bp-desktop-extra-large: 1680px;
+
+// Breakpoints in the form (name: length)
+$breakpoints: (
+  mobile: $bp-mobile,
+  tablet: $bp-tablet,
+  desktop: $bp-desktop,
+  desktop-medium: $bp-desktop-medium,
+  desktop-large: $bp-desktop-large,
+  desktop-extra-large: $bp-desktop-extra-large,
+) !default;

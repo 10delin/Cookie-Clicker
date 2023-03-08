@@ -1,0 +1,27 @@
+{
+  "home": {
+    "title": "Crear nuevo jugador",
+    "placeholder": "Nombre*",
+    "button": "Entrar",
+    "error": "Campo requerido"
+  },
+
+  "header": {
+    "hello": "Hola",
+    "home": "Inicio"
+  },
+
+  "game": {
+    "title": "Mergear pull request: ",
+    "autoMergers": "Auto mergeador: ",
+    "megaMergers": "Mega mergeador: ",
+    "button": "MERGEAR",
+    "buy": "COMPRAR AUTO MERGEADOR",
+    "buyMega": "COMPRAR MEGA MERGEADOR"
+  },
+
+  "ranking": {
+    "title": "Ranking de jugadores",
+    "points": "puntos"
+  }
+}
