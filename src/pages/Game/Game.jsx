@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
 import Header from "../../components/Header/Header";
 
@@ -10,6 +11,7 @@ import MergeButtons from "../../components/MergeButtons/MergeButtons";
 const Game = () => {
   const { t } = useTranslation();
   const { name } = useSelector((state) => state);
+  const navigate = useNavigate();
 
   const [points, setPoints] = useState(0);
   const [autoClickers, setAutoClickers] = useState(0);
@@ -47,7 +49,12 @@ const Game = () => {
   }, [name]);
 
   useEffect(() => {
-    localStorage.setItem(name, JSON.stringify({ name, points, autoClickers }));
+    name === ""
+      ? navigate("/")
+      : localStorage.setItem(
+          name,
+          JSON.stringify({ name, points, autoClickers })
+        );
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [points, autoClickers, name]);
 
@@ -55,7 +62,6 @@ const Game = () => {
     const intervalId = setInterval(() => {
       setPoints((prevPoints) => prevPoints + autoClickers);
     }, 100);
-
     return () => clearInterval(intervalId);
   }, [autoClickers]);
 
@@ -63,7 +69,6 @@ const Game = () => {
     const intervalId = setInterval(() => {
       setPoints((prevPoints) => prevPoints + megaClickers);
     }, 100);
-
     return () => clearInterval(intervalId);
   }, [megaClickers]);
 
