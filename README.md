@@ -11,7 +11,7 @@ A simple game built with React and Redux, where the user and his score is stored
 ## Installation
 To install this project, simply clone the repository and install the dependencies using npm: 
 ```
-$ git clone https://github.com/example/cookie-clicker.git
+$ git clone https://github.com/10delin/cookie-clicker.git
 $ cd cookie-clicker
 $ npm install
 ```
