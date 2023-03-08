@@ -34,7 +34,7 @@ const MergeButtons = ({
 
           <Button
             onClick={handleBuyMegaClicker}
-            text={t("game.buy")}
+            text={t("game.buyMega")}
             secondary={megaClickerCost}
             disabled={points < megaClickerCost}
             icon={<CartIcon />}

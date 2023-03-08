@@ -75,6 +75,8 @@ const Game = () => {
           {t("game.title")} : {points}
           <br></br>
           {t("game.autoMergers")} : {autoClickers}
+          <br></br>
+          {t("game.megaMergers")} : {megaClickers}
         </div>
         <MergeButtons
           handleClick={handleClick}

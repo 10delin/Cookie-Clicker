@@ -13,9 +13,11 @@
 
   "game": {
     "title": "Mergear pull request: ",
-    "autoMergers": "Auto mergeadores: ",
+    "autoMergers": "Auto mergeador: ",
+    "megaMergers": "Mega mergeador: ",
     "button": "MERGEAR",
-    "buy": "COMPRAR AUTO MERGEADORES"
+    "buy": "COMPRAR AUTO MERGEADOR",
+    "buyMega": "COMPRAR MEGA MERGEADOR"
   },
 
   "ranking": {
