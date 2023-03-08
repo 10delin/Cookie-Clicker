@@ -4,12 +4,12 @@ import {
   Route,
 } from "react-router-dom";
 
-import Home from "./pages/Home";
-import Game from "./pages/Game";
+import Home from "./pages/Home/Home";
+import Game from "./pages/Game/Game";
 
 const router = createBrowserRouter(
   createRoutesFromElements([
-    <Route path="/" element={<Home />} />,
+    <Route index path="/" element={<Home />} />,
     <Route path="/game" element={<Game />} />,
   ])
 );

@@ -8,20 +8,20 @@
   border-radius: 10px;
   font-size: 1rem;
   font-weight: 550;
+  background-color: $c-background-color-button;
+  color: $c-text-primary;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-  background-color: #85c2f8;
-  color: #001e3a;
 
   &:disabled,
   &[disabled] {
-    border: 1px solid #999999;
-    background-color: #8f8f8f;
-    color: #0a0a0a;
+    border: 1px solid $c-border-color;
+    background-color: $c-background-disabled-button;
+    color: $c-black;
     cursor: not-allowed;
     &:hover {
-      background-color: #8f8f8f;
-      color: #0a0a0a;
+      background-color: $c-background-disabled-button;
+      color: $c-black;
     }
   }
 

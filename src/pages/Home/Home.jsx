@@ -1,19 +1,20 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
 import { useDispatch } from "react-redux";
-import { setGlobalName } from "../redux/reducers/nameSlice";
 import { useTranslation } from "react-i18next";
-import ChangeLanguage from "../components/ChangeLanguage";
-import InputForm from "../components/InputForm";
-import MouseIcon from "../components/Icons/MouseIcon";
+
+import { setGlobalName } from "../../redux/reducers/nameSlice";
+
+import ChangeLanguage from "../../components/ChangeLanguage/ChangeLanguage";
+import InputForm from "../../components/InputForm/InputForm";
+import MouseIcon from "../../components/Icons/MouseIcon";
 
 const Home = () => {
-  const [name, setName] = useState("");
-
   const navigate = useNavigate();
   const dispatch = useDispatch();
-
   const { t } = useTranslation();
+
+  const [name, setName] = useState("");
 
   const handleChange = (e) => {
     setName(e.target.value);

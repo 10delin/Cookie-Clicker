@@ -17,6 +17,8 @@ describe("Home Test", () => {
 
   it("should work game page properly", () => {
     cy.visit("/game");
+    cy.getBySel("input-home").type("test");
+    cy.getBySel("button-home").click();
     for (let i = 0; i < 50; i++) {
       cy.getBySel("merge-button").click();
     }

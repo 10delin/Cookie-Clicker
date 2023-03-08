@@ -14,7 +14,14 @@
   "game": {
     "title": "Merged pull request: ",
     "autoMergers": "Auto mergers: ",
+    "megaMergers": "Mega mergers: ",
     "button": "MERGE",
-    "buy": "BUY AUTO MERGER"
+    "buy": "BUY AUTO MERGER",
+    "buyMega": "BUY MEGA MERGER"
+  },
+
+  "ranking": {
+    "title": "Player Ranking",
+    "points": "points"
   }
 }

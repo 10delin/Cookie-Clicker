@@ -1,11 +1,11 @@
 .change-language {
   display: flex;
   position: relative;
-  border: 1px solid #afafaf;
-  border-radius: 5px;
-  box-shadow: 0 8px 24px -17px #000101;
   max-width: 122px;
   margin-bottom: 24px;
+  border: 1px solid $c-border-color;
+  border-radius: 5px;
+  box-shadow: 0 8px 24px -17px $c-black;
   @include breakpoint(mobile) {
     margin-bottom: initial;
   }
@@ -14,13 +14,13 @@
     display: flex;
     position: relative;
     align-items: center;
-    text-decoration: none;
     padding: 5px 15px;
     width: 100%;
+    text-decoration: none;
     cursor: pointer;
 
     &:hover {
-      background-color: #7ccdff;
+      background-color: $c-background-color-button;
     }
     img {
       width: 30px;
@@ -31,11 +31,11 @@
     display: flex;
     position: relative;
     align-items: center;
-    text-decoration: none;
     padding: 5px 15px;
     width: 100%;
+    text-decoration: none;
+    background-color: $c-background-active-button;
     cursor: pointer;
-    background-color: #b4daf1;
 
     img {
       width: 30px;
