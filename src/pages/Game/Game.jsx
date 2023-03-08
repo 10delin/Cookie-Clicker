@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import Header from "../components/Header";
+import Header from "../../components/Header/Header";
 import { useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
-import Button from "../components/Button";
-import CartIcon from "../components/Icons/CartIcon";
-import MergeIcon from "../components/Icons/MergeIcon";
+import Button from "../../components/Button/Button";
+import CartIcon from "../../components/Icons/CartIcon";
+import MergeIcon from "../../components/Icons/MergeIcon";
 
 const Game = () => {
   const { t } = useTranslation();

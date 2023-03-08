@@ -1,18 +1,19 @@
 $c-text-primary: #0f104d;
-$c-text-primary-hover: #2a85ee;
-$c-text-title-name: #00012e;
-$c-text-title-secondary: rgba(0, 0, 0, 0.6);
 
-$c-background-body: #f5f5f5;
-$c-background-hover: #f5f5f5;
+$c-background-header: #353535;
+$c-background-color-button: #85c2f8;
+$c-background-active-button: #b4daf1;
+$c-background-disabled-button: #8f8f8f;
+$c-background-input: #242424;
+
+$c-border-color: #999999;
+
+$c-mouse-icon: #c788d4;
+
+$c-hover-icon: rgb(255, 255, 50);
 
 $c-white: #fff;
-$c-footer: #363636;
-$c-under-footer: #141414;
-
-$padding-mobile: 0 5%;
-$padding-desktop: 0 10%;
-$padding-desktop-large: 0 15%;
+$c-black: #000;
 
 // BREAKPOINTS
 // Small screen / phone

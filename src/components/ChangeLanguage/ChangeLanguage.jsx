@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
-import SpainIcon from "../assets/images/spain.webp";
-import UkIcon from "../assets/images/united-kingdom.webp";
+import SpainIcon from "../../assets/images/spain.webp";
+import UkIcon from "../../assets/images/united-kingdom.webp";
 
 const ChangeLanguage = () => {
   const { i18n } = useTranslation();

@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import Button from "./Button";
+import Button from "../Button/Button";
 
 const InputForm = ({ name, handleChange, handleSubmit }) => {
   const { t } = useTranslation();
