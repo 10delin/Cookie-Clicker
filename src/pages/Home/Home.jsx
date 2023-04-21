@@ -8,7 +8,7 @@ import { setGlobalName } from "../../redux/reducers/nameSlice";
 import ChangeLanguage from "../../components/ChangeLanguage/ChangeLanguage";
 import InputForm from "../../components/InputForm/InputForm";
 import MouseIcon from "../../components/Icons/MouseIcon";
-import ContributeGithub from "../../components/ContributeGithub/ContributeGithub";
+import ContributeGithub from "../../components/ContributeGithub/ContributeGithub.jsx";
 
 const Home = () => {
   const navigate = useNavigate();
