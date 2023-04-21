@@ -1,4 +1,4 @@
-const ContributeGithub = () => {
+const ContributeGitHub = () => {
   return (
     <div className="contribute-github">
       <a
@@ -15,4 +15,4 @@ const ContributeGithub = () => {
   );
 };
 
-export default ContributeGithub;
+export default ContributeGitHub;
