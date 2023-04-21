@@ -23,5 +23,10 @@
   "ranking": {
     "title": "Player Ranking",
     "points": "points"
+  },
+
+  "toaster": {
+    "autoMerger": " You bought an auto merger",
+    "megaMerger": " You bought a mega merger"
   }
 }

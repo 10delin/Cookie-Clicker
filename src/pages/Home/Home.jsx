@@ -8,6 +8,7 @@ import { setGlobalName } from "../../redux/reducers/nameSlice";
 import ChangeLanguage from "../../components/ChangeLanguage/ChangeLanguage";
 import InputForm from "../../components/InputForm/InputForm";
 import MouseIcon from "../../components/Icons/MouseIcon";
+import ContributeGithub from "../../components/ContributeGithub/ContributeGithub";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -28,7 +29,10 @@ const Home = () => {
 
   return (
     <div className="home">
-      <ChangeLanguage />
+      <div className="home__header">
+        <ContributeGithub />
+        <ChangeLanguage />
+      </div>
       <div className="home__content">
         <MouseIcon />
         <h1 className="home__content--title">{t("home.title")}</h1>

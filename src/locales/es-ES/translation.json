@@ -23,5 +23,10 @@
   "ranking": {
     "title": "Ranking de jugadores",
     "points": "puntos"
+  },
+
+  "toaster": {
+    "autoMerger": "Has comprado un auto mergeador",
+    "megaMerger": "Has comprado un mega mergeador"
   }
 }

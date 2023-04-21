@@ -2,13 +2,16 @@ import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
-import Header from "../../components/Header/Header";
+import { Toaster, toast } from "sonner";
 
+import Header from "../../components/Header/Header";
 import PlayerRanking from "../../components/PlayerRanking/PlayerRanking";
 import MergeButtons from "../../components/MergeButtons/MergeButtons";
 import GameContent from "../../components/GameContent/GameContent";
+import { useTranslation } from "react-i18next";
 
 const Game = () => {
+  const { t } = useTranslation();
   const { name } = useSelector((state) => state);
   const navigate = useNavigate();
 
@@ -18,7 +21,6 @@ const Game = () => {
 
   const autoClickerCost = 50 + 50 * autoClickers;
   const megaClickerCost = 1000 + 1000 * megaClickers;
-  const showAuto = autoClickers > 0 || points >= 50;
 
   const handleClick = () => {
     setPoints((prevPoints) => prevPoints + 1);
@@ -28,6 +30,7 @@ const Game = () => {
     if (points >= autoClickerCost) {
       setAutoClickers((prevAutoClickers) => prevAutoClickers + 1);
       setPoints((prevPoints) => prevPoints - autoClickerCost);
+      toast.success(t("toaster.autoMerger"));
     }
   };
 
@@ -35,6 +38,7 @@ const Game = () => {
     if (points >= megaClickerCost) {
       setMegaClickers((prevMegaClickers) => prevMegaClickers + 1);
       setPoints((prevPoints) => prevPoints - megaClickerCost);
+      toast.success(t("toaster.megaMerger"));
     }
   };
 
@@ -85,7 +89,6 @@ const Game = () => {
         />
         <MergeButtons
           handleClick={handleClick}
-          showAuto={showAuto}
           handleBuyAutoClicker={handleBuyAutoClicker}
           autoClickerCost={autoClickerCost}
           points={points}
@@ -93,6 +96,7 @@ const Game = () => {
           megaClickerCost={megaClickerCost}
         />
         <PlayerRanking />
+        <Toaster expand={true} duration={1500} richColors />
       </div>
     </>
   );

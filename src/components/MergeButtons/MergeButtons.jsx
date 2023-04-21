@@ -22,27 +22,25 @@ const MergeButtons = ({
         icon={<MergeIcon />}
         dataCy="merge-button"
       />
-      {showAuto && (
-        <>
-          <Button
-            onClick={handleBuyAutoClicker}
-            text={t("game.buy")}
-            secondary={autoClickerCost}
-            disabled={points < autoClickerCost}
-            icon={<CartIcon />}
-            dataCy="auto-button"
-          />
+      <>
+        <Button
+          onClick={handleBuyAutoClicker}
+          text={t("game.buy")}
+          secondary={autoClickerCost}
+          disabled={points < autoClickerCost}
+          icon={<CartIcon />}
+          dataCy="auto-button"
+        />
 
-          <Button
-            onClick={handleBuyMegaClicker}
-            text={t("game.buyMega")}
-            secondary={megaClickerCost}
-            disabled={points < megaClickerCost}
-            icon={<FireIcon />}
-            dataCy="mega-button"
-          />
-        </>
-      )}
+        <Button
+          onClick={handleBuyMegaClicker}
+          text={t("game.buyMega")}
+          secondary={megaClickerCost}
+          disabled={points < megaClickerCost}
+          icon={<FireIcon />}
+          dataCy="mega-button"
+        />
+      </>
     </div>
   );
 };
